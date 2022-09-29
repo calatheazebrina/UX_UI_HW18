@@ -48,7 +48,7 @@ a{
     font-family: 'Nunito', sans-serif;
     font-size: 20px;
 }
-section{
+section, .myProjects, .mySkills{
     padding-right: 120px;
     padding-left: 120px;
 }
