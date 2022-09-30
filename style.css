@@ -50,10 +50,28 @@ a{
 }
 section, .myProjects, .mySkills{
     padding-right: 120px;
-    padding-left: 120px;
-    padding-bottom: 56px;
-    
+    padding-left: 120px;   
 }
+button{
+    font-family: 'Nunito', sans-serif;
+    font-size: 32px;
+    background-color: #FFE599;
+    border: none;
+    padding: 16px;
+    border-radius: 10px;
+}
+hr{
+    height: 8px;
+    background-color: #6D9EEB;
+    border: none;
+}
+.breakLine{
+    padding-top: 56px;
+    padding-bottom: 56px;
+    padding-right: 120px;
+    padding-left: 120px;
+}
+/*Hero formatting*/
 em{
     font-style: italic;
 }
@@ -76,7 +94,6 @@ em{
 #imageBox{
     grid-area: imageBox;
     padding-right: 120px;
-    /* background-color: #FFE599; */
 }
 #selfie{
     max-height: 350px;
@@ -87,30 +104,8 @@ em{
 #workButton{
     position: absolute;
     bottom: 20%;
-   
 }
-button{
-    font-family: 'Nunito', sans-serif;
-    font-size: 32px;
-    background-color: #FFE599;
-    border: none;
-    padding: 16px;
-    border-radius: 10px;
-}
-.body{
-    padding-bottom: 24px;
-}
-hr{
-    height: 8px;
-    background-color: #6D9EEB;
-    border: none;
-}
-.breakLine{
-    padding-top: 56px;
-    padding-bottom: 56px;
-    padding-right: 120px;
-    padding-left: 120px;
-}
+/*My Skills formatting*/
 .icon{
     padding: 8px;
     height: 44px;
@@ -122,10 +117,11 @@ hr{
 #iconBox{
     padding-right: 105px;
 }
-.mySkills{
+#skillsContainer{
     display:flex;
     background-color: rgba(109, 158, 235, 0.3);
-    background-clip: content-box;
+    padding-bottom: 16px;
+    background-clip: padding-box;
     border-radius: 10px;
     align-items: center;
     justify-content: space-between;
@@ -152,6 +148,10 @@ ui{
     padding: 8px;
     background-clip: padding-box;
 }
+/*My Projects formatting*/
+#projectsHeading{
+    padding-left: 105px;
+}
 .projectBox{
     display: flex;
     background-color:  rgba(109, 158, 235, 0.3);
@@ -162,9 +162,7 @@ ui{
 .projectText{
     padding-left: 16px;
 }
-#projectsHeading{
-    padding-left: 105px;
-}
+
 h3{
     font-family: 'Nunito', sans-serif;
     font-weight:500;
