@@ -1,12 +1,14 @@
 /*Header formatting*/
+body{
+    padding: 0 5vw;
+}
 
 header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: baseline;
-    padding-right: 120px;
-    padding-left: 120px;
+    align-items: center;
+    padding: 0 3vw;  
     padding-bottom: 56px;
 }
 h1{
@@ -18,7 +20,7 @@ h1{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    align-items: baseline;
+    align-items: center;
 }
 #name{
     font-weight: 600;
@@ -30,18 +32,19 @@ a{
     text-decoration: none;
 }
 #logo{
-    max-height: 96px;
-    max-width: 160px;
+    width:10vw;
     padding-right: 16px;
 }
 #rectangle{
     position: absolute;
-    right:0%;
+    right:8vw;
     top:0%;
-    padding-right:128px;
-    width:204px;
-    height: 204px;
+    width:84vw;
+    height:70vh;
     z-index: -1;
+}
+#rectangleMobile{
+    display:none;
 }
 /*Body formatting*/
 .body1{
@@ -49,8 +52,7 @@ a{
     font-size: 20px;
 }
 section, .myProjects, .mySkills{
-    padding-right: 120px;
-    padding-left: 120px;   
+    padding: 0 3vw;  
 }
 button{
     font-family: 'Nunito', sans-serif;
@@ -66,10 +68,7 @@ hr{
     border: none;
 }
 .breakLine{
-    padding-top: 56px;
-    padding-bottom: 56px;
-    padding-right: 120px;
-    padding-left: 120px;
+    padding: 2vw 3vw;  
 }
 /*Hero formatting*/
 em{
@@ -79,16 +78,16 @@ em{
     height: 408px;
     display: grid;
     padding-bottom: 56px;
-    grid-template-columns: 70% 30%;
+    grid-template-columns: 65% 35%;
     grid-template-areas: 
     "heroText imageBox";
     position: relative;
-    background-image: url(images/desktop_hero_background.png);
+    /* background-image: url(images/desktop_hero_background.png); */
     background-size: cover;
 }
 #heroText{
     grid-area: heroText;
-    padding-left: 105px;
+    padding-left: 5vw;
     padding-bottom: 24px;
 }
 #imageBox{
@@ -96,14 +95,14 @@ em{
     padding-right: 120px;
 }
 #selfie{
-    max-height: 350px;
+    height: 40vh;
     position: absolute;
-    left: 80%;
-    bottom: 10%;
+    right:4vw;
+    bottom:5vh;
  }
 #workButton{
     position: absolute;
-    bottom: 20%;
+    bottom: 19vh;
 }
 /*My Skills formatting*/
 .icon{
@@ -112,10 +111,10 @@ em{
     width: 44px
 }
 .skillsText{
-    padding-left: 105px;
+    padding-left: 5vw;
 }
 #iconBox{
-    padding-right: 105px;
+    padding-right: 5vw;
 }
 #skillsContainer{
     display:flex;
@@ -150,17 +149,23 @@ ui{
 }
 /*My Projects formatting*/
 #projectsHeading{
-    padding-left: 105px;
+    padding-left: 5vw; 
 }
 .projectBox{
-    display: flex;
+    display:grid;
     background-color:  rgba(109, 158, 235, 0.3);
     border-radius: 10px;
-    padding: 16px;
-    padding-right: 105px;
+    margin-top: 16px;
+    grid-template-columns: 30% 70%;
+    grid-template-areas: 
+    "projectPhoto projectText";
+    align-items:center;
+    padding:10px
 }
+
 .projectText{
     padding-left: 16px;
+    grid-area: projectText;
 }
 
 h3{
@@ -170,10 +175,14 @@ h3{
 }
 .projectHeading{
     display: flex;
-    align-items: center;
+    align-items:flex-start;
 }
 .projectPhoto{
     height: 298px;
+    grid-area: projectPhoto;
+}
+.learnMore{
+    justify-content: flex-end;
 }
 /*Footer formatting*/
 footer{
@@ -192,9 +201,98 @@ footer{
     display: flex;
     justify-content: center;
 }
-.socialIcon{
-    display: flex;
-    padding: 8px;
-    height: 44px;
-    width: 44px
+
+/*mobile screen styles*/
+@media only screen and (max-width: 600px){
+    /*text reformatting*/
+    h1{
+        font-size: 20px;
+    }
+    h3{
+        font-size: 16px;;
+    }
+    .body1{
+        font-size: 14px;
+    }
+    button{
+        font-size: 20px;
+        background-color: #FFE599;
+        padding: 8px;
+    }
+    .bullet1{
+        font-size: 14px;
+    }
+    .bullet2{
+        font-size: 14px;
+    }
+    #rectangleMobile{
+        display: flex;
+        position: absolute;
+        right:8vw;
+        top:0%;
+        width:84vw;
+        height:70vh;
+        z-index: -1;
+    }
+    #rectangle{
+        display: none;
+    }
+    
+    .hero{
+        height: 386px;
+        display: grid;
+        grid-template-columns: 40% 60%;
+        grid-template-areas: 
+        "heroText imageBox";
+        position: relative;
+        /* background-image: url(images/desktop_hero_background.png); */
+        background-size: cover;
+    }
+    #heroText{
+        grid-area: heroText;
+    }
+    #imageBox{
+        grid-area: imageBox;
+    }
+    #selfie{
+        right:2vw;
+        bottom:15vh;
+        height: 30vh;
+     }
+    #workButton{
+        position: absolute;
+        bottom: 9vh;
+    }
+    /*My Skillss Formatting*/
+    #skillsContainer{
+        display:flex;
+        flex-direction: column;
+    }
+    .skillsText{
+        padding: 0 2vw 16px;
+    }
+    #aboutmeButton{
+        display:flex;
+        justify-content: center;
+    }
+    #iconBox{
+        display: flex;
+        justify-content: center;
+    }
+    .icon{
+        height:28px;
+        width:28px;
+    }
+    /*My Projects Formatting*/
+    .projectBox{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .projectPhoto{
+        width:75vw;
+    }
+    .learnMore{
+        display:flex;
+        justify-content: center;
 }
