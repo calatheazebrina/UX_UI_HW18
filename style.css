@@ -51,6 +51,8 @@ a{
 section, .myProjects, .mySkills{
     padding-right: 120px;
     padding-left: 120px;
+    padding-bottom: 56px;
+    
 }
 em{
     font-style: italic;
@@ -106,6 +108,74 @@ hr{
 .breakLine{
     padding-top: 56px;
     padding-bottom: 56px;
+    padding-right: 120px;
+    padding-left: 120px;
+}
+.icon{
+    padding: 8px;
+    height: 44px;
+    width: 44px
+}
+.skillsText{
+    padding-left: 105px;
+}
+#iconBox{
+    padding-right: 105px;
+}
+.mySkills{
+    display:flex;
+    background-color: rgba(109, 158, 235, 0.3);
+    background-clip: content-box;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+ui{
+    list-style: none;
+}
+.bullet1{
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    padding-bottom: 8px;
+}
+.bullet2{
+    display: flex;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    padding-bottom: 16px;
+    align-items: center;
+}
+.skillsIcons{
+    background-color: rgba(109, 158, 235, 0.3);
+    border-radius: 10px;
+    padding: 8px;
+    background-clip: padding-box;
+}
+.projectBox{
+    display: flex;
+    background-color:  rgba(109, 158, 235, 0.3);
+    border-radius: 10px;
+    padding: 16px;
+    padding-right: 105px;
+}
+.projectText{
+    padding-left: 16px;
+}
+#projectsHeading{
+    padding-left: 105px;
+}
+h3{
+    font-family: 'Nunito', sans-serif;
+    font-weight:500;
+    font-size: 32px;
+}
+.projectHeading{
+    display: flex;
+    align-items: center;
+}
+.projectPhoto{
+    height: 298px;
 }
 /*Footer formatting*/
 footer{
